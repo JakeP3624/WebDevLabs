@@ -64,6 +64,4 @@ function greetingFunc() {
     }
 }
 
-if (window.location.href.includes("index.html")) {
-    greetingFunc();
-} 
+greetingFunc();
