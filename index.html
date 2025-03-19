@@ -12,8 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script defer src="./static/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-<body>
+<body onload="addYear()">
     <header>
         <h1 id="webname">Jake Pajerski</h1>
         <nav>
@@ -26,8 +27,17 @@
     <div class="main">
         <h2 id="greeting">Hi, my name is Jake</h2>
         <img src="static/image000000.jpg" alt="A profile picture of Jake Pajerski">
-        <p id="intro">Welcome to my personal webpage! I am excited to share more about myself, my work, and my interests. You can find more information about me in the CV, Contact Me, and For Fun pages of this website. Hope you find my personal website interesting, enjoy!</p>
+        <div class="bio">
+            <p id="shortBio">
+                Welcome to my personal webpage! I am excited to share more about myself, my work, and my interests. 
+                <span id="readMoreBtn" class="toggleBtn">read more...</span>
+            </p>
+            <p id="longBio" style="display: none;">
+                Welcome to my personal webpage! I am excited to share more about myself, my work, and my interests. You can find more information about me in my CV, contact me, and explore fun things on this website. I am passionate about technology, business, and continuous learning, and I am always looking for new opportunities to grow and collaborate. Hope you find my personal website interesting and enjoyable!
+                <span id="readLessBtn" class="toggleBtn">read less</span>
+            </p>
+        </div>    
     </div>
-    <footer>&copy; 2025 designed &#x1F3A8; and coded &#x1F9D1;&#x200D;&#x1F4BB; by Jake Pajerski</footer>
+    <footer>designed &#x1F3A8; and coded &#x1F9D1;&#x200D;&#x1F4BB; by Jake Pajerski<span id="copyYear"></span></footer>
 </body>
 </html>

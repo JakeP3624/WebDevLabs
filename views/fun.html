@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script defer src="../static/script.js"></script>
 </head>
-<body>
+<body onload="addYear()">
     <header>
         <h1 id="webname">Jake Pajerski</h1>
         <nav>
@@ -26,7 +26,8 @@
     </header>
     <div class="main">
         <h2>Things I love to do for fun</h2>
-        <ul>
+        <button id="showButton" onclick="showList()">Click to see...</button>
+        <ul id="myList">
             <li>Soccer</li>
             <li>Running</li>
             <li>Lifting</li>
@@ -34,6 +35,6 @@
             <li>Trivia</li>
         </ul>
     </div>
-    <footer>&copy; 2025 designed &#x1F3A8; and coded &#x1F9D1;&#x200D;&#x1F4BB; by Jake Pajerski</footer>
+    <footer>designed &#x1F3A8; and coded &#x1F9D1;&#x200D;&#x1F4BB; by Jake Pajerski <span id="copyYear"></span></footer>
 </body>
 </html>
