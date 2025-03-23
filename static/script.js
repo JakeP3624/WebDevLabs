@@ -49,18 +49,24 @@ function getOrdinal(num) {
 // findTheBanana(L2);
 
 function greetingFunc() {
-    var d = new Date();
-    var h = d.getHours();
-    var E = document.getElementById("greeting");
+    if (window.location.href.indexOf("index.html") !== -1) {
+        var d = new Date();
+        var h = d.getHours();
+        var E = document.getElementById("greeting");
 
-    if (h < 12) {
-        E.innerHTML = "Good morning, I am Jake";  
-    } else if (h < 18) {
-        E.innerHTML = "Good afternoon, I am Jake";
-    } else if (h < 20) {
-        E.innerHTML = "Good evening, I am Jake";
-    } else {
-        E.innerHTML = "Good night, I am Jake";
+        if (E != null) {
+            if (h < 12) {
+                E.innerHTML = "Good morning, I am Jake";  
+            } else if (h < 18) {
+                E.innerHTML = "Good afternoon, I am Jake";
+            } else if (h < 20) {
+                E.innerHTML = "Good evening, I am Jake";
+            } else {
+                E.innerHTML = "Good night, I am Jake";
+            }
+        } else {
+            console.error("Element with id 'greeting' not found!")
+        }
     }
 }
 
@@ -71,12 +77,12 @@ function addYear() {
     document.getElementById("copyYear").textContent = `© ${year}`;
 }
 
-function showList() {
-    var list = document.getElementById("myList");
-    var button = document.getElementById("showButton");
-    list.style.display = "block";
-    button.style.display = "none";
-}
+// function showList() {
+//     var list = document.getElementById("myList");
+//     var button = document.getElementById("showButton");
+//     list.style.display = "block";
+//     button.style.display = "none";
+// }
 
 $(document).ready(function () {
     $('#readMoreBtn').click(function () {
@@ -109,4 +115,16 @@ function validateForm() {
     } else {
       message.innerHTML = "Form submitted successfully!";
     }
+}
+
+function getAdvice() {
+    fetch("https://api.adviceslip.com/advice")
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("adviceText").innerText = data.slip.advice;
+        })
+        .catch(error => {
+            document.getElementById("adviceText").innerText = "Oops! Couldn't fetch advice.";
+            console.log("Error fetching advice:", error);
+        });
 }

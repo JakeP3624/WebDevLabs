@@ -8,7 +8,6 @@
     <meta name="description" content="Jake Pajerski professional website">
     <title>Jake Pajerski</title>
     <link rel="stylesheet" href="../static/style.css">
-    <link rel="stylesheet" href="static/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -24,17 +23,31 @@
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-    <div class="main">
-        <h2>Things I love to do for fun</h2>
-        <button id="showButton" onclick="showList()">Click to see...</button>
-        <ul id="myList">
-            <li>Soccer</li>
-            <li>Running</li>
-            <li>Lifting</li>
-            <li>Reading</li>
-            <li>Trivia</li>
-        </ul>
+    <div class="mainLayout">
+        <div id="item1">
+            <h2>Things I love to do for fun</h2>
+            <!-- <button id="showButton" onclick="showList()">Click to see...</button> -->
+            <ul id="myList">
+                <li>Soccer</li>
+                <li>Running</li>
+                <li>Lifting</li>
+                <li>Reading</li>
+                <li>Trivia</li>
+            </ul>
+        </div>
+        <div id="item2">
+            <img src="../static/IMG_6485.JPG" alt="Fun Image" class="funIMG">
+        </div>
+        <div id="item3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ji5_MqicxSo?si=brQWFPVNCWvvO1J5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        </div>
+        <div id="item4">
+            <h2>Need Some Advice?</h2>
+            <p id="adviceText">Click the button to get a random piece of advice!</p>
+            <button onclick="getAdvice()">Get Advice</button>
+        </div>
     </div>
     <footer>designed &#x1F3A8; and coded &#x1F9D1;&#x200D;&#x1F4BB; by Jake Pajerski <span id="copyYear"></span></footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="../static/script.js"></script>
 </body>
 </html>
