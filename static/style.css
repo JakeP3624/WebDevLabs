@@ -54,9 +54,9 @@ footer {
     align-items: center;
 }
 
-/* #myList {
+#myList {
     display: none;
-} */
+}
 
 button {
     padding: 10px 20px;
@@ -76,77 +76,17 @@ button {
     text-align: center;
 }
 
-#item2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-}
-
-#contactForm {
-    width: 100%;
-    max-width: 400px; 
-}
-
-#item2 h2 {
-    align-self: flex-start;
-    margin-left: 10%; 
-}
-
-.funIMG {
-    border-radius: 50%;
-    width: 450px;
-    height: 300px;
-    object-fit: cover;
-}
-
-#item4 {
-    border: none;
-    border-radius: 12px;
-    display: inline-block;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px;
-    text-align: center;
-    background-color: #ffffff;
-}
-
-#item4 h2 {
-    color: #333;
-    margin: 0;
-    font-weight: 500;
-}
-
-#item4 p {
-    margin: 10px 0 20px;
-    font-size: 1em;
-    color: #555;
-}
-
-#item4 button {
-    padding: 8px 16px;
-    border-radius: 6px;
-    border: none;
-    background-color: #4CAF50;
+nav a.active {
+    background: #f39c12;
     color: white;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    font-size: 0.9em;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px 10px;
 }
 
-#item4 button:hover {
-    background-color: #9AAD8F;
-}
-
-.mainLayout {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-#item1, #item2, #item3, #item4 {
-    flex: 1 1 45%;
-    box-sizing: border-box;
+nav a:hover {
+    background: #d35400;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
 }
